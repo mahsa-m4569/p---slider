@@ -1,0 +1,104 @@
+body{
+    background: linear-gradient(45deg, rgb(251, 165, 40), rgb(237, 29, 59), rgb(243, 119, 123));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider {
+   transform: scale(1.5);
+}
+
+.sliderBtnBox{
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
+.lableBox{
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+}
+
+.sliderBtn{
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.5s;
+    margin-top: 24px;
+    margin-left: 6px;
+
+}
+
+
+.checkSlider{
+    display: none;
+}
+.checkSlider:nth-child(1):checked ~ .sliderBtnBox .lableBox .sliderBtn:nth-child(1),
+.checkSlider:nth-child(2):checked ~ .sliderBtnBox .lableBox .sliderBtn:nth-child(2),
+.checkSlider:nth-child(3):checked ~ .sliderBtnBox .lableBox .sliderBtn:nth-child(3),
+.checkSlider:nth-child(4):checked ~ .sliderBtnBox .lableBox .sliderBtn:nth-child(4)
+
+ { background-color: rgb(255, 153, 0);
+    transform: scale(1.2);
+}
+.checkSlider:nth-child(5):checked ~ .sliderBtnBox .lableBox .sliderBtn:nth-child(5),
+.checkSlider:nth-child(6):checked ~ .sliderBtnBox .lableBox .sliderBtn:nth-child(6)
+ { background-color: rgb(255, 153, 0);
+    transform: scale(1.2);
+}
+
+.slider .checkSlider:nth-child(1):checked ~ .sliderSection .imgBox{
+    margin-left: 80px;
+}
+.slider .checkSlider:nth-child(2):checked ~ .sliderSection .imgBox{
+    margin-left: -344px;
+}
+.slider .checkSlider:nth-child(3):checked ~ .sliderSection .imgBox{
+    margin-left:-935px;
+}
+/* .slider .checkSlider:nth-child(4):checked ~ .sliderSection .imgBox{
+    margin-left: 
+}
+.slider .checkSlider:nth-child(5):checked ~ .sliderSection .imgBox{
+    margin-left: 
+}
+.slider .checkSlider:nth-child(6):checked ~ .sliderSection .imgBox{
+    margin-left: 
+} */
+
+
+.sliderSection{
+    width: 760px;
+    padding: 20px 0 20px 0;
+    height: 398px;
+    overflow: hidden;
+  
+}
+
+.imgBox{
+    width: 2000px;
+    margin-left: 80px;
+    transition: all 1s;
+}
+.imgBox img{
+    object-fit: cover;
+    width: 502px;
+    height: 435px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px white;
+}
+
+@media (max-width : 680px) {
+    .slider {
+        width: 100vw;
+     }
+     
+    
+}
